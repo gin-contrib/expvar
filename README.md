@@ -36,8 +36,7 @@ import (
 
 func main() {
 	r := gin.Default()
-
-	r := gin.Default()
+	
 	r.GET("/debug/vars", expvar.Handler())
 	r.Run(":8080")
 }
