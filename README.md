@@ -37,8 +37,8 @@ import (
 func main() {
 	r := gin.Default()
 
-	router := gin.Default()
-	router.GET("/debug/vars", expvar.Handler())
-	router.Run(":8080")
+	r := gin.Default()
+	r.GET("/debug/vars", expvar.Handler())
+	r.Run(":8080")
 }
 ```
