@@ -2,12 +2,18 @@ language: go
 sudo: false
 
 go:
-  - 1.5.4
-  - 1.6.4
-  - 1.7.4
+  - 1.6.x
+  - 1.7.x
+  - 1.8.x
   - tip
 
+install:
+  - go get -u github.com/kardianos/govendor
+  - go get github.com/campoy/embedmd
+  - govendor sync
+
 script:
+  - embedmd -d *.md
   - go test -v -covermode=atomic -coverprofile=coverage.out
 
 after_success:

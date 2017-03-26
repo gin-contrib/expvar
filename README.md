@@ -25,6 +25,7 @@ import "github.com/gin-contrib/expvar"
 
 ### Canonical example:
 
+[embedmd]:# (example/main.go go)
 ```go
 package main
 
@@ -35,7 +36,7 @@ import (
 
 func main() {
 	r := gin.Default()
-	
+
 	r.GET("/debug/vars", expvar.Handler())
 	r.Run(":8080")
 }
