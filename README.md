@@ -14,7 +14,7 @@ A expvar handler for gin framework, [expvar](https://golang.org/pkg/expvar/) pro
 Download and install it:
 
 ```sh
-$ go get github.com/gin-contrib/expvar
+go get github.com/gin-contrib/expvar
 ```
 
 Import it in your code:
@@ -30,6 +30,8 @@ import "github.com/gin-contrib/expvar"
 package main
 
 import (
+	"log"
+
 	"github.com/gin-contrib/expvar"
 	"github.com/gin-gonic/gin"
 )
@@ -38,6 +40,9 @@ func main() {
 	r := gin.Default()
 
 	r.GET("/debug/vars", expvar.Handler())
-	r.Run(":8080")
+
+	if err := r.Run(":8080"); err != nil {
+		log.Fatal(err)
+	}
 }
 ```
