@@ -36,8 +36,6 @@ jobs:
 
       - name: Run Tests
         run: |
-          go install github.com/campoy/embedmd@latest
-          embedmd -d *.md
           go test -v -covermode=atomic -coverprofile=coverage.out
 
       - name: Upload coverage to Codecov

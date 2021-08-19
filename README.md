@@ -23,26 +23,25 @@ Import it in your code:
 import "github.com/gin-contrib/expvar"
 ```
 
-### Canonical example:
+### Canonical example
 
-[embedmd]:# (example/main.go go)
 ```go
 package main
 
 import (
-	"log"
+  "log"
 
-	"github.com/gin-contrib/expvar"
-	"github.com/gin-gonic/gin"
+  "github.com/gin-contrib/expvar"
+  "github.com/gin-gonic/gin"
 )
 
 func main() {
-	r := gin.Default()
+  r := gin.Default()
 
-	r.GET("/debug/vars", expvar.Handler())
+  r.GET("/debug/vars", expvar.Handler())
 
-	if err := r.Run(":8080"); err != nil {
-		log.Fatal(err)
-	}
+  if err := r.Run(":8080"); err != nil {
+    log.Fatal(err)
+  }
 }
 ```
