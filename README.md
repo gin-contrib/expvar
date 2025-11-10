@@ -1,6 +1,7 @@
 # expvar
 
 [![Run Tests](https://github.com/gin-contrib/expvar/actions/workflows/go.yml/badge.svg?branch=master)](https://github.com/gin-contrib/expvar/actions/workflows/go.yml)
+[![Trivy Security Scan](https://github.com/gin-contrib/expvar/actions/workflows/trivy-scan.yml/badge.svg)](https://github.com/gin-contrib/expvar/actions/workflows/trivy-scan.yml)
 [![codecov](https://codecov.io/gh/gin-contrib/expvar/branch/master/graph/badge.svg)](https://codecov.io/gh/gin-contrib/expvar)
 [![Go Report Card](https://goreportcard.com/badge/github.com/gin-contrib/expvar)](https://goreportcard.com/report/github.com/gin-contrib/expvar)
 [![GoDoc](https://godoc.org/github.com/gin-contrib/expvar?status.svg)](https://godoc.org/github.com/gin-contrib/expvar)
