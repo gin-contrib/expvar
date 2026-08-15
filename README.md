@@ -3,7 +3,7 @@
 [![Run Tests](https://github.com/gin-contrib/expvar/actions/workflows/go.yml/badge.svg?branch=master)](https://github.com/gin-contrib/expvar/actions/workflows/go.yml)
 [![Trivy Security Scan](https://github.com/gin-contrib/expvar/actions/workflows/trivy-scan.yml/badge.svg)](https://github.com/gin-contrib/expvar/actions/workflows/trivy-scan.yml)
 [![codecov](https://codecov.io/gh/gin-contrib/expvar/branch/master/graph/badge.svg)](https://codecov.io/gh/gin-contrib/expvar)
-[![GoDoc](https://godoc.org/github.com/gin-contrib/expvar?status.svg)](https://godoc.org/github.com/gin-contrib/expvar)
+[![Go Reference](https://pkg.go.dev/badge/github.com/gin-contrib/expvar.svg)](https://pkg.go.dev/github.com/gin-contrib/expvar)
 
 A expvar handler for gin framework, [expvar](https://golang.org/pkg/expvar/) provides a standardized interface to public variables.
 
