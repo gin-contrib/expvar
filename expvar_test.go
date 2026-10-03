@@ -22,5 +22,5 @@ func TestHandler(t *testing.T) {
 	router.GET("/debug/vars", Handler())
 
 	w := performRequest(router, "GET", "/debug/vars")
-	assert.Equal(t, w.Code, 200)
+	assert.Equal(t, 200, w.Code)
 }
