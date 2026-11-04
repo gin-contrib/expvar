@@ -1,7 +1,6 @@
 package expvar
 
 import (
-	"context"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -10,8 +9,8 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func performRequest(r http.Handler, method, path string) *httptest.ResponseRecorder {
-	req, _ := http.NewRequestWithContext(context.Background(), method, path, nil)
+func performRequest(t testing.TB, r http.Handler, method, path string) *httptest.ResponseRecorder {
+	req, _ := http.NewRequestWithContext(t.Context(), method, path, nil)
 	w := httptest.NewRecorder()
 	r.ServeHTTP(w, req)
 	return w
@@ -21,6 +20,6 @@ func TestHandler(t *testing.T) {
 	router := gin.New()
 	router.GET("/debug/vars", Handler())
 
-	w := performRequest(router, "GET", "/debug/vars")
+	w := performRequest(t, router, "GET", "/debug/vars")
 	assert.Equal(t, 200, w.Code)
 }
